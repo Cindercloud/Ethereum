@@ -5,3 +5,11 @@ cache:
   directories:
   - ".autoconf"
   - "$HOME/.m2"
+deploy:
+  provider: releases
+  api_key:
+    secure: yveFoxA70W7QKA6G9x0cBUalqwJj5VMxJOEFToUR+9XicPATpjK+bndShok3YmlE3jJGgNDFHGoUTnUrbiubwrXXAlxipL6dwFFDXxnEqMX/Pimd6NwR5HYdCouN79fCwk5qBM2z4SD63NxoVlgh+nKJsfe/DW3x8O4FzqbHJ9cJcB26AKUpRWDCvTdgTPt0S6cqqOgjjZtXZmQ+RumD08TEuA323cID2GkOnMP/2LqFn31kCOj3aNnzlHPfz5klLgyLE062EEbOxQB+Ep1a5jBk9+Hrd3H5APN40ktrf6Upcrk2mGSlQT1Z2NCa2cw9R87mdDHTDDahEmlqP41l3MYnSd3N0mv8/8Z5f2Jc8KpUKYk4ze3zXIRYC+G3yLdr8sM96LLWvxgo02xhTdAMDWy8uDwsJZA3ij/LG8JsfynWYT7Qg8n1Q6iar4IjE4FpoAufo+n4lKh5ZNRgnOiwMrLjfFIm2BG7njucWM8WL44JfZUSColO1OCxdnD92IMSQkg1g5CvTH9W/HzziKCw6QrLnfVR2QTvOEWSgPV/mQon7MDEw8DyZOBgqNqGc2KTPfXBJtwVryuvRJiCkXtTOrR+01q4939g6JzjrRGQr2D0XIH/PK1BcVBs+XXYHuWabZQPagaVV8TFuONiAt307v0uK/0K/988kK8fx0eEMrs=
+  file: web/build/libs/ethereum.jar
+  on:
+    repo: Cindercloud/Ethereum
+    tags: true
