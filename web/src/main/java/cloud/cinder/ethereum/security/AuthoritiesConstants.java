@@ -1,4 +1,4 @@
-package cloud.cinder.switchapp.security;
+package cloud.cinder.ethereum.security;
 
 /**
  * Constants for Spring Security authorities.

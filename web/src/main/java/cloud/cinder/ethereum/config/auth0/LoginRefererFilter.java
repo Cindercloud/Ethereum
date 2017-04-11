@@ -1,4 +1,4 @@
-package cloud.cinder.switchapp.config.auth0;
+package cloud.cinder.ethereum.config.auth0;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.filter.GenericFilterBean;
