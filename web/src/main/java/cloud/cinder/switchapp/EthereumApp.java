@@ -15,13 +15,13 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @SpringBootApplication
-public class SwitchApp {
+public class EthereumApp {
 
-    private static final Logger log = LoggerFactory.getLogger(SwitchApp.class);
+    private static final Logger log = LoggerFactory.getLogger(EthereumApp.class);
 
     private final Environment env;
 
-    public SwitchApp(Environment env) {
+    public EthereumApp(Environment env) {
         this.env = env;
     }
 
@@ -41,7 +41,7 @@ public class SwitchApp {
     }
 
     public static void main(String[] args) throws UnknownHostException {
-        SpringApplication app = new SpringApplication(SwitchApp.class);
+        SpringApplication app = new SpringApplication(EthereumApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         log.info("\n----------------------------------------------------------\n\t"
