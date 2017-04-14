@@ -5,13 +5,16 @@ spring:
         basename: i18n/messages
     thymeleaf:
         mode: XHTML
-
+    datasource:
+        url: jdbc:mysql://localhost:3306/switch
+        username: switch
+        password: switch
+        driver-class-name: com.mysql.jdbc.Driver
 server:
     port: 8082
     session:
         cookie:
             http-only: true
-
 debug: true
 
 logging:
