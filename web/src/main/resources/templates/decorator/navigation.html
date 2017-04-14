@@ -9,53 +9,42 @@
     <!--=== Header ===-->
     <div class="header">
         <div class="container">
-            <h1 class="logo" href="index.html">
-                <div style="margin: 20px 0;">
-                    <span class="color-green">C</span>ryptotrader
-                </div>
-            </h1>
+            <!-- Navbar Brand -->
+
+            <!-- ENd Navbar Brand -->
+
+            <div class="navbar-brand">
+                <a href="index.html">
+                    <h1><span class="color-green">C</span>indercloud</h1>
+                </a>
+            </div>
+
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <li class="page-scroll home">
+                            <a th:href="@{/}">Home</a>
+                        </li>
+                        <li>
+                            <a th:href="@{/register}">Pricing</a>
+                        </li>
+                        <li sec:authorize="isAuthenticated()">
+                            <a th:href="@{/register}">Dashboard</a>
+                        </li>
+                        <li sec:authorize="!isAuthenticated()">
+                            <a th:href="@{/login}">Login</a>
+                        </li>
+                        <li sec:authorize="isAuthenticated()">
+                            <a th:href="@{/logout}">Logout</a>
+                        </li>
+                    </ul>
+                </div><!--/end container-->
+            </div><!--/navbar-collapse-->
         </div><!--/end container-->
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
-            <div class="container">
-                <ul class="nav navbar-nav">
-                    <li class="page-scroll home">
-                        <a th:href="@{/}">Home</a>
-                    </li>
-                    <li sec:authorize="!isAuthenticated()">
-                        <a th:href="@{/register}">Register</a>
-                    </li>
-                    <li sec:authorize="!isAuthenticated()">
-                        <a th:href="@{/login}">Login</a>
-                    </li>
-                    <li class="dropdown" sec:authorize="isAuthenticated()">
-                        <a href="#">Paper Trading</a>
-                        <ul class="dropdown-menu">
-                            <li><a th:href="@{/user/papertrade-configurations}">Configuration</a></li>
-                            <li><a th:href="@{/user/papertrade}">History</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown" sec:authorize="isAuthenticated()">
-                        <a href="#">Trading</a>
-                        <ul class="dropdown-menu">
-                            <li><a th:href="@{/indicators}">Indicators</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown" sec:authorize="isAuthenticated()">
-                        <a href="#">admin</a>
-                        <ul class="dropdown-menu">
-                            <li><a th:href="@{/admin/users}">user management</a></li>
-                            <li><a th:href="@{/admin/papertrade}">papertrade</a></li>
-                            <li><a th:href="@{/admin/import-configurations}">import-configurations</a></li>
-                        </ul>
-                    </li>
-                    <li sec:authorize="isAuthenticated()">
-                        <a th:href="@{/logout}">Logout</a>
-                    </li>
-                </ul>
-            </div><!--/end container-->
-        </div><!--/navbar-collapse-->
+
     </div>
     <!--=== End Header ===-->
 

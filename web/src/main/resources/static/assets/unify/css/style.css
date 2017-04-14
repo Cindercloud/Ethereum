@@ -12,6 +12,7 @@
 
 /*Import CSS Plugins*/
 @import url(plugins/style-switcher.css);
+@import url(theme-colors/orange.css);
 
 * {
 	border-radius: 0;
