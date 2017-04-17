@@ -17,7 +17,7 @@ public class LoginRefererFilter extends GenericFilterBean {
 
     private static final String REFERER_URL = "cinder.cloud.auth.referer-url";
 
-    @Value("${cloud.cinder.switch.base-url}")
+    @Value("${cloud.cinder.ethereum.base-url}")
     private String switchBaseUrl;
 
     @Override

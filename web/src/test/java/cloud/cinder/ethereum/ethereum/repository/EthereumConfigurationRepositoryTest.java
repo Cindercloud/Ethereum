@@ -23,6 +23,6 @@ public class EthereumConfigurationRepositoryTest extends EthereumAppIT {
 
     @Test
     public void findOneReturnsResponse() throws Exception {
-        assertThat(ethereumConfigurationRepository.findOne(ENTITY.getId())).isEqualTo(ENTITY);
+        assertThat(ethereumConfigurationRepository.findOne(ENTITY.getId()).isPresent()).isTrue();
     }
 }

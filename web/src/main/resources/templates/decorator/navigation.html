@@ -13,7 +13,7 @@
 
             <!-- ENd Navbar Brand -->
 
-            <div class="navbar-brand">
+            <div class="">
                 <a href="index.html">
                     <h1><span class="color-green">C</span>indercloud</h1>
                 </a>
@@ -21,29 +21,28 @@
 
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-responsive-collapse">
-                <div class="container">
-                    <ul class="nav navbar-nav">
-                        <li class="page-scroll home">
-                            <a th:href="@{/}">Home</a>
-                        </li>
-                        <li>
-                            <a th:href="@{/register}">Pricing</a>
-                        </li>
-                        <li sec:authorize="isAuthenticated()">
-                            <a th:href="@{/register}">Dashboard</a>
-                        </li>
-                        <li sec:authorize="!isAuthenticated()">
-                            <a th:href="@{/login}">Login</a>
-                        </li>
-                        <li sec:authorize="isAuthenticated()">
-                            <a th:href="@{/logout}">Logout</a>
-                        </li>
-                    </ul>
-                </div><!--/end container-->
-            </div><!--/navbar-collapse-->
         </div><!--/end container-->
-
+        <div class="collapse navbar-collapse navbar-responsive-collapse">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li class="page-scroll home">
+                        <a th:href="@{/}">Home</a>
+                    </li>
+                    <li>
+                        <a th:href="@{/register}">Pricing</a>
+                    </li>
+                    <li sec:authorize="isAuthenticated()">
+                        <a th:href="@{/register}">Dashboard</a>
+                    </li>
+                    <li sec:authorize="!isAuthenticated()">
+                        <a th:href="@{/login}">Login</a>
+                    </li>
+                    <li sec:authorize="isAuthenticated()">
+                        <a th:href="@{/logout}">Logout</a>
+                    </li>
+                </ul>
+            </div><!--/end container-->
+        </div><!--/navbar-collapse-->
 
     </div>
     <!--=== End Header ===-->

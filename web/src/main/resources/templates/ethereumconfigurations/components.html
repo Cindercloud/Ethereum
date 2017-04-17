@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<body>
+    <div th:fragment="table" class="row">
+    <div class="panel panel-orange margin-bottom-40">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-tasks"></i> Ethereum test instances
+                <a th:href="@{/configurations/add}" class="right pull-right btn-u btn-u-xs rounded btn-u-green" type="button"><i class="fa fa-plus"></i></a></h3>
+        </div>
+        <div class="panel-body">
+            <p>Here's an overview of your own ethereum test instances.</p>
+        </div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>id</th>
+                <th>name</th>
+                <th>since</th>
+                <th>active</th>
+                <th>action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="ethereumConfig : ${ethereumConfigurations}">
+                <td th:value="${ethereumConfig.id}">1</td>
+                <td th:value="${ethereumConfig.name}">Mark</td>
+                <td th:value="${ethereumConfig.creationDate}">now</td>
+                <td th:value="${ethereumConfig.active}">@mdo</td>
+                <td>
+                    <div class="btn-group">
+                        <button type="button" class="btn-u btn-u-blue">
+                            <i class="fa fa-cloud"></i>
+                            Cloud Hosting
+                        </button>
+                        <button type="button" class="btn-u btn-u-blue btn-u-split-blue dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-angle-down"></i>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#"><i class="fa fa-arrows-alt"></i> Fullscreen</a></li>
+                            <li><a href="#"><i class="fa fa-unlink"></i> Some Links</a></li>
+                            <li><a href="#"><i class="fa fa-list"></i> Main Links</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="fa fa-cloud-download"></i> Download All</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

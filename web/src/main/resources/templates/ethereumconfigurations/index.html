@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="decorator/decorator">
+
+
+<div layout:fragment="header-content">
+
+</div>
+
+<div layout:fragment="main-content">
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Paginations</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Features</a></li>
+                <li class="active">Paginations</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container content">
+        <div th:remove="tag" th:include="components :: table"></div>
+    </div>
+</div>
+
+<div layout:fragment="footer-content">
+
+</div>
+
+
+</html>
