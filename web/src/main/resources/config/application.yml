@@ -6,9 +6,9 @@ spring:
     thymeleaf:
         mode: XHTML
     datasource:
-        url: jdbc:mysql://localhost:3306/switch
-        username: switch
-        password: switch
+        url: jdbc:mysql://localhost:3306/cc_ethereum
+        username: cc_ethereum
+        password: cc_ethereum
         driver-class-name: com.mysql.jdbc.Driver
 server:
     port: 8082
